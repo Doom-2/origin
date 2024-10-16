@@ -30,13 +30,13 @@ int main() {
 		cin >> month_num;
 		month = static_cast<months>(month_num);
 		switch (month)
-		{	
+		{
 		case months::goodbye:
 			cout << "До свидания" << endl;
 			break;
 		case months::январь:
-				cout << "Январь" << endl;
-				break;
+			cout << "Январь" << endl;
+			break;
 		case months::февраль:
 			cout << "Февраль" << endl;
 			break;
