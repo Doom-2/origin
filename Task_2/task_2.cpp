@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <iomanip>
 #include <Windows.h>
@@ -24,15 +23,15 @@ int main() {
 	SetConsoleOutputCP(1251);
 
 	BankAccount* ba_array = new BankAccount[10];
-	cout << "Ââåäèòå íîìåð ñ÷åòà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€ ÑÑ‡ÐµÑ‚Ð°: ";
 	cin >> ba_array[0].account_num;
-	cout << endl << "Ââåäèòå èìÿ âëàäåëüöà: ";
+	cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ Ð²Ð»Ð°Ð´ÐµÐ»ÑŒÑ†Ð°: ";
 	cin >> ba_array[0].owner_name;
-	cout << endl << "Ââåäèòå áàëàíñ: ";
+	cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð±Ð°Ð»Ð°Ð½Ñ: ";
 	cin >> ba_array[0].balance;
-	cout << endl << "Ââåäèòå íîâûé áàëàíñ: ";
+	cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð²Ñ‹Ð¹ Ð±Ð°Ð»Ð°Ð½Ñ: ";
 	double new_balance{};
 	cin >> new_balance;
 	change_ballace(ba_array[0], new_balance);
-	cout << endl << fixed << setprecision(3) << "Âàø ñ÷åò: " << ba_array[0].owner_name << ", " << ba_array[0].account_num << ", " << ba_array[0].balance << endl;
+	cout << endl << fixed << setprecision(3) << "Ð’Ð°Ñˆ ÑÑ‡ÐµÑ‚: " << ba_array[0].owner_name << ", " << ba_array[0].account_num << ", " << ba_array[0].balance << endl;
 }

@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <Windows.h>
 
@@ -15,11 +14,11 @@ struct address
 };
 
 void print_address(address& a) {
-	cout << "Ãîğîä: " << a.city << endl;
-	cout << "Óëèöà: " << a.street << endl;
-	cout << "Íîìåğ äîìà: " << a.building << endl;
-	cout << "Íîìåğ êâàğòèğû: " << a.apartment_num << endl;
-	cout << "Èíäåêñ: " << a.postcode << endl;
+	cout << "Ğ“Ğ¾Ñ€Ğ¾Ğ´: " << a.city << endl;
+	cout << "Ğ£Ğ»Ğ¸Ñ†Ğ°: " << a.street << endl;
+	cout << "ĞĞ¾Ğ¼ĞµÑ€ Ğ´Ğ¾Ğ¼Ğ°: " << a.building << endl;
+	cout << "ĞĞ¾Ğ¼ĞµÑ€ ĞºĞ²Ğ°Ñ€Ñ‚Ğ¸Ñ€Ñ‹: " << a.apartment_num << endl;
+	cout << "Ğ˜Ğ½Ğ´ĞµĞºÑ: " << a.postcode << endl;
 }
 
 
@@ -30,9 +29,9 @@ int main() {
 
 	address* address_array = new address[10];
 
-	address_array[0] = { "Ìîñêâà", "Àğáàò", 12, 8, 123456 };
-	address_array[1].city = "Èæåâñê";
-	address_array[1].street = "Ïóøêèíà";
+	address_array[0] = { "ĞœĞ¾ÑĞºĞ²Ğ°", "ĞÑ€Ğ±Ğ°Ñ‚", 12, 8, 123456 };
+	address_array[1].city = "Ğ˜Ğ¶ĞµĞ²ÑĞº";
+	address_array[1].street = "ĞŸÑƒÑˆĞºĞ¸Ğ½Ğ°";
 	address_array[1].building = 59;
 	address_array[1].apartment_num = 143;
 	address_array[1].postcode = 953769;
