@@ -1,0 +1,77 @@
+
+#include <iostream>
+
+using namespace std;
+
+enum class months
+{
+	goodbye,
+	€нварь,
+	февраль,
+	март,
+	апрель,
+	май,
+	июнь,
+	июль,
+	август,
+	сент€брь,
+	окт€брь,
+	но€брь,
+	декабрь
+};
+
+int main() {
+
+	setlocale(LC_ALL, "RU");
+	int month_num;
+
+	do {
+		cout << "¬ведите номер мес€ца: ";
+		cin >> month_num;
+
+		switch (month_num)
+		{	
+		case static_cast<int>(months::goodbye):
+			cout << "ƒо свидани€" << endl;
+			break;
+		case static_cast<int>(months::€нварь):
+				cout << "январь" << endl;
+				break;
+		case static_cast<int>(months::февраль):
+			cout << "‘евраль" << endl;
+			break;
+		case static_cast<int>(months::март):
+			cout << "ћарт" << endl;
+			break;
+		case static_cast<int>(months::апрель):
+			cout << "јпрель" << endl;
+			break;
+		case static_cast<int>(months::май):
+			cout << "ћай" << endl;
+			break;
+		case static_cast<int>(months::июнь):
+			cout << "»юнь" << endl;
+			break;
+		case static_cast<int>(months::июль):
+			cout << "»юль" << endl;
+			break;
+		case static_cast<int>(months::август):
+			cout << "јвгуст" << endl;
+			break;
+		case static_cast<int>(months::сент€брь):
+			cout << "—ент€брь" << endl;
+		case static_cast<int>(months::окт€брь):
+			cout << "ќкт€брь" << endl;
+			break;
+		case static_cast<int>(months::но€брь):
+			cout << "Ќо€брь" << endl;
+			break;
+		case static_cast<int>(months::декабрь):
+			cout << "ƒекабрь" << endl;
+			break;
+		default:
+			cout << "Ќеправильный номер!" << endl;
+			break;
+		}
+	} while (month_num);
+}
