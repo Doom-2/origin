@@ -22,50 +22,51 @@ enum class months
 int main() {
 
 	setlocale(LC_ALL, "RU");
+	months month;
 	int month_num;
 
 	do {
 		cout << "Введите номер месяца: ";
 		cin >> month_num;
-
-		switch (month_num)
+		month = static_cast<months>(month_num);
+		switch (month)
 		{	
-		case static_cast<int>(months::goodbye):
+		case months::goodbye:
 			cout << "До свидания" << endl;
 			break;
-		case static_cast<int>(months::январь):
+		case months::январь:
 				cout << "Январь" << endl;
 				break;
-		case static_cast<int>(months::февраль):
+		case months::февраль:
 			cout << "Февраль" << endl;
 			break;
-		case static_cast<int>(months::март):
+		case months::март:
 			cout << "Март" << endl;
 			break;
-		case static_cast<int>(months::апрель):
+		case months::апрель:
 			cout << "Апрель" << endl;
 			break;
-		case static_cast<int>(months::май):
+		case months::май:
 			cout << "Май" << endl;
 			break;
-		case static_cast<int>(months::июнь):
+		case months::июнь:
 			cout << "Июнь" << endl;
 			break;
-		case static_cast<int>(months::июль):
+		case months::июль:
 			cout << "Июль" << endl;
 			break;
-		case static_cast<int>(months::август):
+		case months::август:
 			cout << "Август" << endl;
 			break;
-		case static_cast<int>(months::сентябрь):
+		case months::сентябрь:
 			cout << "Сентябрь" << endl;
-		case static_cast<int>(months::октябрь):
+		case months::октябрь:
 			cout << "Октябрь" << endl;
 			break;
-		case static_cast<int>(months::ноябрь):
+		case months::ноябрь:
 			cout << "Ноябрь" << endl;
 			break;
-		case static_cast<int>(months::декабрь):
+		case months::декабрь:
 			cout << "Декабрь" << endl;
 			break;
 		default:
