@@ -60,6 +60,7 @@ int main() {
 			break;
 		case months::сентябрь:
 			cout << "Сентябрь" << endl;
+			break;
 		case months::октябрь:
 			cout << "Октябрь" << endl;
 			break;
