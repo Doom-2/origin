@@ -24,32 +24,32 @@ public:
 		this->appartment_number = _appartment_number;
 	}
 
-	string get_city()
+	void set_city(const string& city)
+	{
+		this->city = city;
+	}
+
+	void set_street(const string& street)
+	{
+		this->street = street;
+	}
+
+	void set_house_number(const int& house_number)
+	{
+		this->house_number = house_number;
+	}
+
+	void set_appartment_number(const int& appartment_number)
+	{
+		this->appartment_number = appartment_number;
+	}
+
+	const string& get_city() const
 	{
 		return city;
 	}
 
-	void set_city(string _city)
-	{
-		city = _city;
-	}
-
-	void set_street(string _street)
-	{
-		street = _street;
-	}
-
-	void set_house_number(const int _house_number)
-	{
-		house_number = _house_number;
-	}
-
-	void set_appartment_number(const int _appartment_number)
-	{
-		appartment_number = _appartment_number;
-	}
-
-	string GetAddress()
+	const string GetAddress() const
 	{
 		return city + ", " + street + ", " + to_string(house_number) + ", " + to_string(appartment_number);
 	}
