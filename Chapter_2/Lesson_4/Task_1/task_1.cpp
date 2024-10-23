@@ -8,10 +8,12 @@ using namespace std;
 class Addresses
 {
 private:
-	string city{};
-	string street{};
 	int house_number{};
 	int appartment_number{};
+
+public:
+	string city{};
+	string street{};
 
 public:
 	Addresses() : Addresses("", "", 0, 0) {};
@@ -24,23 +26,33 @@ public:
 		this->appartment_number = _appartment_number;
 	}
 
-	void set_city(const string &city)
+	void set_city(const string& city)
 	{
 		this->city = city;
 	}
 
-	void set_street(const string &street)
+	void set_street(const string& street)
 	{
 		this->street = street;
 	}
 
-	void set_house_number(const int &house_number)
+	void set_house_number(const int& house_number)
 	{
+		if (house_number < 0) {
+			cerr << "Номер дома не может быть отрицательным числом\n"
+				"Будет использовано значение по умолчанию 0" << endl;
+			return;
+		}
 		this->house_number = house_number;
 	}
 
-	void set_appartment_number(const int &appartment_number)
+	void set_appartment_number(const int& appartment_number)
 	{
+		if (appartment_number < 0) {
+			cerr << "Номер квартиры не может быть отрицательным числом\n"
+				"Будет использовано значение по умолчанию 0" << endl;
+			return;
+		}
 		this->appartment_number = appartment_number;
 	}
 
@@ -52,7 +64,7 @@ public:
 
 // Checks if the string is not empty and is an integer
 bool isNumber(const string& s) {
-	return !s.empty() && (s.find_first_not_of("0123456789") == s.npos);
+	return !s.empty() && (s.find_first_not_of("-0123456789") == s.npos);
 }
 
 int main() {
@@ -80,10 +92,10 @@ int main() {
 				switch (j)
 				{
 				case 0:
-					addresses[i].set_city(s);
+					addresses[i].city = s;
 					break;
 				case 1:
-					addresses[i].set_street(s);
+					addresses[i].street = s;
 					break;
 				case 2:
 					if (isNumber(s))
