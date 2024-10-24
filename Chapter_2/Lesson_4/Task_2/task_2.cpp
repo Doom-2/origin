@@ -57,7 +57,7 @@ public:
 		return _city;
 	}
 
-	const string GetAddress() const
+	const string getAddress() const
 	{
 		return _city + ", " + _street + ", " + to_string(_house_number) + ", " + to_string(_appartment_number);
 	}
@@ -94,10 +94,8 @@ void bubbleSort(Addresses* addresses, int size) {
 
 int main() {
 	setlocale(LC_ALL, "Russian");
-	Addresses address_2;
-	cout << address_2.GetAddress();
 	string s;
-	int arr_size, i = 0;
+	int arr_size;
 	ifstream fin("in.txt");
 	ofstream fout("out.txt");
 	if (fin.is_open()) {
@@ -155,8 +153,8 @@ int main() {
 		bubbleSort(addresses, arr_size);
 		for (int i = 0; i < arr_size; i++) {
 			if (i == 0)
-				fout << addresses[i].GetAddress();
-			else fout << endl << addresses[i].GetAddress();
+				fout << addresses[i].getAddress();
+			else fout << endl << addresses[i].getAddress();
 		}
 
 		delete[] addresses;

@@ -32,7 +32,7 @@ public:
 		_street = street;
 	}
 
-	void set_house_number(const int& house_number)
+	void set_house_number(int house_number)
 	{
 		if (house_number < 0) {
 			cerr << "Номер дома не может быть отрицательным числом\n"
@@ -42,7 +42,7 @@ public:
 		_house_number = house_number;
 	}
 
-	void set_appartment_number(const int& appartment_number)
+	void set_appartment_number(int appartment_number)
 	{
 		if (appartment_number < 0) {
 			cerr << "Номер квартиры не может быть отрицательным числом\n"
@@ -52,7 +52,7 @@ public:
 		_appartment_number = appartment_number;
 	}
 
-	const string GetAddress() const
+	const string getAddress() const
 	{
 		return _city + ", " + _street + ", " + to_string(_house_number) + ", " + to_string(_appartment_number);
 	}
@@ -66,7 +66,7 @@ bool isNumber(const string& s) {
 int main() {
 	setlocale(LC_ALL, "Russian");
 	string s;
-	int arr_size, i = 0;
+	int arr_size;
 	ifstream fin("in.txt");
 	ofstream fout("out.txt");
 	if (fin.is_open()) {
@@ -123,8 +123,8 @@ int main() {
 
 		for (int i = arr_size - 1; i >= 0; i--)
 			if (i == arr_size - 1)
-				fout << addresses[i].GetAddress();
-			else fout << endl << addresses[i].GetAddress();
+				fout << addresses[i].getAddress();
+			else fout << endl << addresses[i].getAddress();
 		delete[] addresses;
 	}
 	fout.close();
