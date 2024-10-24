@@ -8,32 +8,28 @@ using namespace std;
 class Addresses
 {
 private:
-	int house_number{};
-	int appartment_number{};
-
-public:
-	string city{};
-	string street{};
+	string _city;
+	string _street;
+	int _house_number;
+	int _appartment_number;
 
 public:
 	Addresses() : Addresses("", "", 0, 0) {};
 
-	Addresses(const char* _city, const char* _street, const int& _house_number, const int& _appartment_number)
+	Addresses(const string& city, const string& street, int house_number, int appartment_number)
+		: _city(city), _street(street), _house_number(house_number), _appartment_number(appartment_number)
 	{
-		this->city = _city;
-		this->street = _street;
-		this->house_number = _house_number;
-		this->appartment_number = _appartment_number;
+
 	}
 
 	void set_city(const string& city)
 	{
-		this->city = city;
+		_city = city;
 	}
 
 	void set_street(const string& street)
 	{
-		this->street = street;
+		_street = street;
 	}
 
 	void set_house_number(const int& house_number)
@@ -43,7 +39,7 @@ public:
 				"Будет использовано значение по умолчанию 0" << endl;
 			return;
 		}
-		this->house_number = house_number;
+		_house_number = house_number;
 	}
 
 	void set_appartment_number(const int& appartment_number)
@@ -53,12 +49,12 @@ public:
 				"Будет использовано значение по умолчанию 0" << endl;
 			return;
 		}
-		this->appartment_number = appartment_number;
+		_appartment_number = appartment_number;
 	}
 
 	const string GetAddress() const
 	{
-		return city + ", " + street + ", " + to_string(house_number) + ", " + to_string(appartment_number);
+		return _city + ", " + _street + ", " + to_string(_house_number) + ", " + to_string(_appartment_number);
 	}
 };
 
@@ -92,10 +88,10 @@ int main() {
 				switch (j)
 				{
 				case 0:
-					addresses[i].city = s;
+					addresses[i].set_city(s);
 					break;
 				case 1:
-					addresses[i].street = s;
+					addresses[i].set_street(s);
 					break;
 				case 2:
 					if (isNumber(s))
