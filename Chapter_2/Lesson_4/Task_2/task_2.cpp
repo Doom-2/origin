@@ -63,8 +63,22 @@ public:
 	}
 };
 
+//Counts the number of dash '-' characters in a string
+int count_dashes(string s) {
+	int count = 0;
+
+	for (int i = 0; i < s.size(); i++)
+		if (s[i] == '-') count++;
+
+	return count;
+}
+
 // Checks if the string is not empty and is an integer
 bool isNumber(const string& s) {
+	if (s.at(0) == '-' && count_dashes(s) > 1 ||
+		s.at(0) != '-' && count_dashes(s) > 0 ||
+		s.at(0) == '-' && s.size() == 1)
+		return false;
 	return !s.empty() && (s.find_first_not_of("-0123456789") == s.npos);
 }
 
