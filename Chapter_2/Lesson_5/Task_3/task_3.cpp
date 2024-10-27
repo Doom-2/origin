@@ -87,7 +87,6 @@ protected:
 			cout << "Неправильная" << endl;
 	}
 
-protected:
 	void printMe() const
 	{
 		cout << get_name() << ": " << endl;
@@ -162,6 +161,7 @@ public:
 		set_size_num(_size_num);
 	}
 
+protected:
 	void get_sizes() const
 	{
 		cout << "Стороны: " << "a=" << _a << " b=" << _b << " c=" << _c << " d=" << _d << endl;

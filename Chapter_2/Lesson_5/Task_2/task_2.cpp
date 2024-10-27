@@ -136,6 +136,7 @@ public:
 		cout << "Углы: " << "A=" << _A << " B=" << _B << " C=" << _C << " D=" << _D << endl;
 	}
 
+protected:
 	void printMe() const
 	{
 		cout << get_name() << ": " << endl;
