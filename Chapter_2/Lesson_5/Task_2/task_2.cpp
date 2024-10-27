@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 
 using namespace std;
 
@@ -6,7 +6,7 @@ using namespace std;
 class Figure
 {
 private:
-	string _name{ "Фигура" };
+	string _name{ "Р¤РёРіСѓСЂР°" };
 
 protected:
 
@@ -30,7 +30,7 @@ public:
 class Triangle : public Figure
 {
 private:
-	string _name{ "Треугольник" };
+	string _name{ "РўСЂРµСѓРіРѕР»СЊРЅРёРє" };
 	double _a{};
 	double _b{};
 	double _c{};
@@ -48,12 +48,12 @@ public:
 
 	void get_sizes() const
 	{
-		cout << "Стороны: " << "a=" << _a << " b=" << _b << " c=" << _c << endl;
+		cout << "РЎС‚РѕСЂРѕРЅС‹: " << "a=" << _a << " b=" << _b << " c=" << _c << endl;
 	}
 
 	void get_angles() const
 	{
-		cout << "Углы: " << "A=" << _A << " B=" << _B << " C=" << _C << endl;
+		cout << "РЈРіР»С‹: " << "A=" << _A << " B=" << _B << " C=" << _C << endl;
 	}
 
 protected:
@@ -69,7 +69,7 @@ protected:
 class RightTriangle : public Triangle
 {
 private:
-	string _name{ "Прямоугольниый треугольник" };
+	string _name{ "РџСЂСЏРјРѕСѓРіРѕР»СЊРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє" };
 
 public:
 	RightTriangle() : RightTriangle(10, 20, 30, 30, 60) {}
@@ -82,7 +82,7 @@ public:
 class IsoscelesTriangle : public Triangle
 {
 private:
-	string _name{ "Равнобедренный треугольник" };
+	string _name{ "Р Р°РІРЅРѕР±РµРґСЂРµРЅРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє" };
 
 public:
 	IsoscelesTriangle() : IsoscelesTriangle(10, 20, 30, 60) {}
@@ -95,7 +95,7 @@ public:
 class EquilateralTriangle : public Triangle
 {
 private:
-	string _name{ "Равносторонний треугольник" };
+	string _name{ "Р Р°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРёР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє" };
 
 public:
 	EquilateralTriangle() : EquilateralTriangle(10) {}
@@ -108,7 +108,7 @@ public:
 class Quadrangle : public Figure
 {
 private:
-	string _name{ "Четырехугольник" };
+	string _name{ "Р§РµС‚С‹СЂРµС…СѓРіРѕР»СЊРЅРёРє" };
 	double _a;
 	double _b;
 	double _c;
@@ -128,12 +128,12 @@ public:
 
 	void get_sizes() const
 	{
-		cout << "Стороны: " << "a=" << _a << " b=" << _b << " c=" << _c << " d=" << _d << endl;
+		cout << "РЎС‚РѕСЂРѕРЅС‹: " << "a=" << _a << " b=" << _b << " c=" << _c << " d=" << _d << endl;
 	}
 
 	void get_angles() const
 	{
-		cout << "Углы: " << "A=" << _A << " B=" << _B << " C=" << _C << " D=" << _D << endl;
+		cout << "РЈРіР»С‹: " << "A=" << _A << " B=" << _B << " C=" << _C << " D=" << _D << endl;
 	}
 
 	void printMe() const
@@ -148,7 +148,7 @@ public:
 class Rectangle : public Quadrangle
 {
 private:
-	string _name{ "Прямоугольник" };
+	string _name{ "РџСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє" };
 
 public:
 	Rectangle() : Rectangle(10, 20) {}
@@ -161,7 +161,7 @@ public:
 class Square : public Quadrangle
 {
 private:
-	string _name{ "Квадрат" };
+	string _name{ "РљРІР°РґСЂР°С‚" };
 
 public:
 	Square() : Square(10) {}
@@ -174,7 +174,7 @@ public:
 class Parallelogram : public Quadrangle
 {
 private:
-	string _name{ "Параллелограмм" };
+	string _name{ "РџР°СЂР°Р»Р»РµР»РѕРіСЂР°РјРј" };
 
 public:
 	Parallelogram() : Parallelogram(10, 20, 60, 120) {}
@@ -187,7 +187,7 @@ public:
 class Rhomb : public Quadrangle
 {
 private:
-	string _name{ "Ромб" };
+	string _name{ "Р РѕРјР±" };
 
 public:
 	Rhomb() : Rhomb(10, 40, 140) {}

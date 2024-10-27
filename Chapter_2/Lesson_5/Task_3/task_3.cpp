@@ -1,4 +1,4 @@
-// This is a personal academic project. Dear PVS-Studio, please check it.
+п»ї// This is a personal academic project. Dear PVS-Studio, please check it.
 // PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
 #include <iostream>
 
@@ -9,7 +9,7 @@ class Figure
 {
 private:
 	int _size_num{};
-	string _name{ "Фигура" };
+	string _name{ "Р¤РёРіСѓСЂР°" };
 
 protected:
 
@@ -31,9 +31,9 @@ protected:
 
 	void printCorrectness() const {
 		if (get_size_num() == 0)
-			cout << "Правильная" << endl;
+			cout << "РџСЂР°РІРёР»СЊРЅР°СЏ" << endl;
 		else
-			cout << "Неправильная" << endl;
+			cout << "РќРµРїСЂР°РІРёР»СЊРЅР°СЏ" << endl;
 	}
 
 public:
@@ -41,7 +41,7 @@ public:
 	{
 		cout << get_name() << ": " << endl;
 		printCorrectness();
-		cout << "Количество сторон: " << get_size_num();
+		cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕСЂРѕРЅ: " << get_size_num();
 		cout << endl << endl;
 	}
 };
@@ -52,7 +52,7 @@ class Triangle : public Figure
 {
 protected:
 	int _size_num = 3;
-	string _name{ "Треугольник" };
+	string _name{ "РўСЂРµСѓРіРѕР»СЊРЅРёРє" };
 	double _a{};
 	double _b{};
 	double _c{};
@@ -72,19 +72,19 @@ public:
 protected:
 	void get_sizes() const
 	{
-		cout << "Стороны: " << "a=" << _a << " b=" << _b << " c=" << _c << endl;
+		cout << "РЎС‚РѕСЂРѕРЅС‹: " << "a=" << _a << " b=" << _b << " c=" << _c << endl;
 	}
 
 	void get_angles() const
 	{
-		cout << "Углы: " << "A=" << _A << " B=" << _B << " C=" << _C << endl;
+		cout << "РЈРіР»С‹: " << "A=" << _A << " B=" << _B << " C=" << _C << endl;
 	}
 
 	void printCorrectness() const {
 		if (get_size_num() == 3 && _A + _B + _C == 180)
-			cout << "Правильная" << endl;
+			cout << "РџСЂР°РІРёР»СЊРЅР°СЏ" << endl;
 		else
-			cout << "Неправильная" << endl;
+			cout << "РќРµРїСЂР°РІРёР»СЊРЅР°СЏ" << endl;
 	}
 
 protected:
@@ -92,7 +92,7 @@ protected:
 	{
 		cout << get_name() << ": " << endl;
 		printCorrectness();
-		cout << "Количество сторон: " << get_size_num();
+		cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕСЂРѕРЅ: " << get_size_num();
 		cout << endl;
 		get_sizes();
 		get_angles();
@@ -103,7 +103,7 @@ protected:
 class RightTriangle : public Triangle
 {
 private:
-	string _name{ "Прямоугольниый треугольник" };
+	string _name{ "РџСЂСЏРјРѕСѓРіРѕР»СЊРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє" };
 
 public:
 	RightTriangle() : RightTriangle(10, 20, 30, 30, 60) {}
@@ -116,7 +116,7 @@ public:
 class IsoscelesTriangle : public Triangle
 {
 private:
-	string _name{ "Равнобедренный треугольник" };
+	string _name{ "Р Р°РІРЅРѕР±РµРґСЂРµРЅРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє" };
 
 public:
 	IsoscelesTriangle() : IsoscelesTriangle(10, 20, 30, 60) {}
@@ -129,7 +129,7 @@ public:
 class EquilateralTriangle : public Triangle
 {
 private:
-	string _name{ "Равносторонний треугольник" };
+	string _name{ "Р Р°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРёР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє" };
 
 public:
 	EquilateralTriangle() : EquilateralTriangle(10) {}
@@ -143,7 +143,7 @@ class Quadrangle : public Figure
 {
 protected:
 	int _size_num = 4;
-	string _name{ "Четырехугольник" };
+	string _name{ "Р§РµС‚С‹СЂРµС…СѓРіРѕР»СЊРЅРёРє" };
 	double _a;
 	double _b;
 	double _c;
@@ -164,26 +164,26 @@ public:
 
 	void get_sizes() const
 	{
-		cout << "Стороны: " << "a=" << _a << " b=" << _b << " c=" << _c << " d=" << _d << endl;
+		cout << "РЎС‚РѕСЂРѕРЅС‹: " << "a=" << _a << " b=" << _b << " c=" << _c << " d=" << _d << endl;
 	}
 
 	void get_angles() const
 	{
-		cout << "Углы: " << "A=" << _A << " B=" << _B << " C=" << _C << " D=" << _D << endl;
+		cout << "РЈРіР»С‹: " << "A=" << _A << " B=" << _B << " C=" << _C << " D=" << _D << endl;
 	}
 
 	void printCorrectness() const {
 		if (get_size_num() == 4 && _A + _B + _C + _D == 360)
-			cout << "Правильная" << endl;
+			cout << "РџСЂР°РІРёР»СЊРЅР°СЏ" << endl;
 		else
-			cout << "Неправильная" << endl;
+			cout << "РќРµРїСЂР°РІРёР»СЊРЅР°СЏ" << endl;
 	}
 
 	void printMe() const
 	{
 		cout << get_name() << ": " << endl;
 		printCorrectness();
-		cout << "Количество сторон: " << get_size_num();
+		cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕСЂРѕРЅ: " << get_size_num();
 		cout << endl;
 		get_sizes();
 		get_angles();
@@ -194,7 +194,7 @@ public:
 class Rectangle : public Quadrangle
 {
 private:
-	string _name{ "Прямоугольник" };
+	string _name{ "РџСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє" };
 
 public:
 	Rectangle() : Rectangle(10, 20) {}
@@ -207,7 +207,7 @@ public:
 class Square : public Quadrangle
 {
 private:
-	string _name{ "Квадрат" };
+	string _name{ "РљРІР°РґСЂР°С‚" };
 
 public:
 	Square() : Square(10) {}
@@ -220,7 +220,7 @@ public:
 class Parallelogram : public Quadrangle
 {
 private:
-	string _name{ "Параллелограмм" };
+	string _name{ "РџР°СЂР°Р»Р»РµР»РѕРіСЂР°РјРј" };
 
 public:
 	Parallelogram() : Parallelogram(10, 20, 60, 120) {}
@@ -233,7 +233,7 @@ public:
 class Rhomb : public Quadrangle
 {
 private:
-	string _name{ "Ромб" };
+	string _name{ "Р РѕРјР±" };
 
 public:
 	Rhomb() : Rhomb(10, 40, 140) {}

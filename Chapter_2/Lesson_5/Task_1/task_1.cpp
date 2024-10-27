@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 
 using namespace std;
 
@@ -7,7 +7,7 @@ class Figure
 {
 private:
 	int _size_num{};
-	string _name{ "Фигура" };
+	string _name{ "Р¤РёРіСѓСЂР°" };
 
 protected:
 	void set_size_num(int size_num) {
@@ -31,7 +31,7 @@ class Triangle :public Figure
 
 public:
 	Triangle() {
-		set_name("Треугольник");
+		set_name("РўСЂРµСѓРіРѕР»СЊРЅРёРє");
 		set_size_num(3);
 	}
 };
@@ -42,7 +42,7 @@ class Quadrangle :public Figure
 
 public:
 	Quadrangle() {
-		set_name("Четырехугольник");
+		set_name("Р§РµС‚С‹СЂРµС…СѓРіРѕР»СЊРЅРёРє");
 		set_size_num(4);
 	}
 };
@@ -52,7 +52,7 @@ int main() {
 	Figure figure;
 	Triangle triangle;
 	Quadrangle quadrangle;
-	cout << "Количество сторон:" << endl;
+	cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕСЂРѕРЅ:" << endl;
 	figure.printMe();
 	triangle.printMe();
 	quadrangle.printMe();
