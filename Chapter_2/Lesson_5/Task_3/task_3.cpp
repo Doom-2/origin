@@ -1,6 +1,7 @@
 ﻿// This is a personal academic project. Dear PVS-Studio, please check it.
 // PVS-Studio Static Code Analyzer for C, C++, C#, and Java: https://pvs-studio.com
 #include <iostream>
+#include <limits>
 
 using namespace std;
 
@@ -27,6 +28,11 @@ protected:
 
 	const int& get_size_num() const {
 		return _size_num;
+	}
+
+	bool areSame(double a, double b) const
+	{
+		return fabs(a - b) < DBL_EPSILON;
 	}
 
 	void printCorrectness() const {
@@ -81,7 +87,7 @@ protected:
 	}
 
 	void printCorrectness() const {
-		if (get_size_num() == 3 && _A + _B + _C == 180)
+		if (get_size_num() == 3 && areSame(_A + _B + _C, 180))
 			cout << "Правильная" << endl;
 		else
 			cout << "Неправильная" << endl;
@@ -173,7 +179,7 @@ protected:
 	}
 
 	void printCorrectness() const {
-		if (get_size_num() == 4 && _A + _B + _C + _D == 360)
+		if (get_size_num() == 4 && areSame(_A + _B + _C, 360))
 			cout << "Правильная" << endl;
 		else
 			cout << "Неправильная" << endl;
