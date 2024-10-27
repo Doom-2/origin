@@ -50,7 +50,7 @@ public:
 
 class Triangle : public Figure
 {
-protected:
+private:
 	int _size_num = 3;
 	string _name{ "Треугольник" };
 	double _a{};
@@ -141,7 +141,7 @@ public:
 
 class Quadrangle : public Figure
 {
-protected:
+private:
 	int _size_num = 4;
 	string _name{ "Четырехугольник" };
 	double _a;
