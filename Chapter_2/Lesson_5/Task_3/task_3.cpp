@@ -35,7 +35,7 @@ public:
 
 class Triangle : public Figure
 {
-private:
+protected:
 	double _a{};
 	double _b{};
 	double _c{};
@@ -108,37 +108,32 @@ public:
 	}
 };
 
-class EquilateralTriangle : public Triangle
+class EquilateralTriangle : public IsoscelesTriangle
 {
 public:
-	EquilateralTriangle() :Triangle(10, 10, 10, 60, 60, 60) {
+	EquilateralTriangle() : IsoscelesTriangle(10, 10, 60, 60) {
 		_name = "Равносторонний треугольник";
 	}
 
-	EquilateralTriangle(double a) : Triangle(a, a, a, 60, 60, 60) {
+	EquilateralTriangle(double a) : IsoscelesTriangle(a, a, 60, 60) {
 		_name = "Равносторонний треугольник";
 	}
 };
 
-class Quadrangle : public Figure
+class Quadrangle : public Triangle
 {
-private:
-	double _a{};
-	double _b{};
-	double _c{};
+protected:
 	double _d{};
-	double _A{};
-	double _B{};
-	double _C{};
 	double _D{};
 
 public:
-	Quadrangle() : Quadrangle(10, 20, 30, 40, 50, 60, 120, 130) {
+	Quadrangle() : Triangle(10, 20, 30, 50, 60, 120), _d(40), _D(130) {
 		_name = "Четырехугольник";
 		_size_num = 4;
 	}
+
 	Quadrangle(double a, double b, double c, double d, double A, double B, double C, double D)
-		: _a(a), _b(b), _c(c), _d(d), _A(A), _B(B), _C(C), _D(D) {
+		: Triangle(a, b, c, A, B, C), _d(d), _D(D) {
 		_name = "Четырехугольник";
 		_size_num = 4;
 	}
@@ -172,30 +167,6 @@ protected:
 	}
 };
 
-class Rectangle : public Quadrangle
-{
-public:
-	Rectangle() : Quadrangle(10, 20, 10, 20, 90, 90, 90, 90) {
-		_name = "Прямоугольник";
-	}
-
-	Rectangle(double a, double b) : Quadrangle(a, b, a, b, 90, 90, 90, 90) {
-		_name = "Прямоугольник";
-	}
-};
-
-class Square : public Quadrangle
-{
-public:
-	Square() : Quadrangle(10, 10, 10, 10, 90, 90, 90, 90) {
-		_name = "Квадрат";
-	}
-
-	Square(double a) : Quadrangle(a, a, a, a, 90, 90, 90, 90) {
-		_name = "Квадрат";
-	}
-};
-
 class Parallelogram : public Quadrangle
 {
 public:
@@ -208,14 +179,38 @@ public:
 	}
 };
 
-class Rhomb : public Quadrangle
+class Rectangle : public Parallelogram
 {
 public:
-	Rhomb() : Quadrangle(10, 10, 10, 10, 40, 140, 40, 140) {
+	Rectangle() : Parallelogram(10, 20, 90, 90) {
+		_name = "Прямоугольник";
+	}
+
+	Rectangle(double a, double b) : Parallelogram(a, b, 90, 90) {
+		_name = "Прямоугольник";
+	}
+};
+
+class Square : public Rectangle
+{
+public:
+	Square() : Rectangle(10, 10) {
+		_name = "Квадрат";
+	}
+
+	Square(double a) : Rectangle(a, a) {
+		_name = "Квадрат";
+	}
+};
+
+class Rhomb : public Parallelogram
+{
+public:
+	Rhomb() : Parallelogram(10, 10, 40, 140) {
 		_name = "Ромб";
 	}
 
-	Rhomb(double a, double A, double B) : Quadrangle(a, a, a, a, A, B, A, B) {
+	Rhomb(double a, double A, double B) : Parallelogram(a, a, A, B) {
 		_name = "Ромб";
 	}
 };
