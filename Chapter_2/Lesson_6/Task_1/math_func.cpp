@@ -1,5 +1,8 @@
 ﻿#include "math_func.h"
 
+Exception::Exception() : 
+	runtime_error("Math error: Attempted to divide by Zero\n") {}
+
 int add(int a, int b)
 {
 	return a + b;

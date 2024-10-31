@@ -3,8 +3,7 @@
 
 class Exception : public std::runtime_error {
 public:
-    Exception()
-        : runtime_error("Math error: Attempted to divide by Zero\n") {}
+    Exception();
 };
 
 int add(int a, int b);
