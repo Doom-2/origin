@@ -1,21 +1,21 @@
-#include "Quadrangle.h"
+п»ї#include "Quadrangle.h"
 
 
 Quadrangle::Quadrangle() : Triangle(10, 20, 30, 50, 60, 120), _d(40), _D(130) {
-	_name = "Четырехугольник";
+	_name = "Р§РµС‚С‹СЂРµС…СѓРіРѕР»СЊРЅРёРє";
 }
 
 Quadrangle::Quadrangle(double a, double b, double c, double d, double A, double B, double C, double D)
 	: Triangle(a, b, c, A, B, C), _d(d), _D(D) {
-	_name = "Четырехугольник";
+	_name = "Р§РµС‚С‹СЂРµС…СѓРіРѕР»СЊРЅРёРє";
 }
 
 void Quadrangle::print_sizes() const {
-	cout << "Стороны: " << "a=" << _a << " b=" << _b << " c=" << _c << " d=" << _d << endl;
+	cout << "РЎС‚РѕСЂРѕРЅС‹: " << "a=" << _a << " b=" << _b << " c=" << _c << " d=" << _d << endl;
 }
 
 void Quadrangle::print_angles() const {
-	cout << "Углы: " << "A=" << _A << " B=" << _B << " C=" << _C << " D=" << _D << endl;
+	cout << "РЈРіР»С‹: " << "A=" << _A << " B=" << _B << " C=" << _C << " D=" << _D << endl;
 }
 
 void Quadrangle::printMe() const

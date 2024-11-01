@@ -1,10 +1,10 @@
-#include "Square.h"
+п»ї#include "Square.h"
 
 
 Square::Square() : Rectangle(10, 10) {
-	_name = "Квадрат";
+	_name = "РљРІР°РґСЂР°С‚";
 }
 
 Square::Square(double a) : Rectangle(a, a) {
-	_name = "Квадрат";
+	_name = "РљРІР°РґСЂР°С‚";
 }

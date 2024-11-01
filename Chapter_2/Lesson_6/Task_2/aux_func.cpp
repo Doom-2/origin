@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include "aux_func.h"
 
 using namespace std;
@@ -16,7 +16,7 @@ int cin_int()
 			switch (i)
 			{
 			case 1:
-				cerr << "Íåêîððåêòíûé ââîä. Äîïóñêàåòñÿ òîëüêî öåëîå ÷èñëî.\n";
+				cerr << "ÐÐµÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´. Ð”Ð¾Ð¿ÑƒÑÐºÐ°ÐµÑ‚ÑÑ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ñ†ÐµÐ»Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾.\n";
 				cin.clear();
 				break;
 			default:
@@ -47,7 +47,7 @@ char cin_correct_char() {
 			switch (i)
 			{
 			case 1:
-				cerr << "Íå êîððåêòííàÿ êîììàíäà!\n";
+				cerr << "ÐÐµ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð½Ð°Ñ ÐºÐ¾Ð¼Ð¼Ð°Ð½Ð´Ð°!\n";
 				cin.clear();
 				break;
 			default:

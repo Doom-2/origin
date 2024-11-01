@@ -1,10 +1,10 @@
-#include "EquilateralTriangle.h"
+п»ї#include "EquilateralTriangle.h"
 
 
 EquilateralTriangle::EquilateralTriangle() : IsoscelesTriangle(10, 10, 60, 60) {
-	_name = "Равносторонний треугольник";
+	_name = "Р Р°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРёР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє";
 }
 
 EquilateralTriangle::EquilateralTriangle(double a) : IsoscelesTriangle(a, a, 60, 60) {
-	_name = "Равносторонний треугольник";
+	_name = "Р Р°РІРЅРѕСЃС‚РѕСЂРѕРЅРЅРёР№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє";
 }
