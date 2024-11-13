@@ -20,8 +20,8 @@ private:
 public:
 	Fraction(int numerator, int denominator)
 	{
-		numerator_ = numerator;
-		denominator_ = denominator;
+		numerator_ = numerator / getGSD(numerator, denominator);
+		denominator_ = denominator / getGSD(numerator, denominator);
 	}
 
 	// Returns a string representation of a fraction
@@ -36,26 +36,22 @@ public:
 	Fraction operator+(Fraction other) {
 		int res_numerator = numerator_ * other.denominator_ + other.numerator_ * denominator_;
 		int res_denominator = denominator_ * other.denominator_;
-		int gsd = getGSD(res_numerator, res_denominator);
-		return Fraction(res_numerator / gsd, res_denominator / gsd);
+		return Fraction(res_numerator, res_denominator);
 	}
 	Fraction operator-(Fraction other) {
 		int res_numerator = numerator_ * other.denominator_ - other.numerator_ * denominator_;
 		int res_denominator = denominator_ * other.denominator_;
-		int gsd = getGSD(res_numerator, res_denominator);
-		return Fraction(res_numerator / gsd, res_denominator / gsd);
+		return Fraction(res_numerator, res_denominator);
 	}
 	Fraction operator*(Fraction other) {
 		int res_numerator = numerator_ * other.numerator_;
 		int res_denominator = denominator_ * other.denominator_;
-		int gsd = getGSD(res_numerator, res_denominator);
-		return Fraction(res_numerator / gsd, res_denominator / gsd);
+		return Fraction(res_numerator, res_denominator);
 	}
 	Fraction operator/(Fraction other) {
 		int res_numerator = numerator_ * other.denominator_;
 		int res_denominator = denominator_ * other.numerator_;
-		int gsd = getGSD(res_numerator, res_denominator);
-		return Fraction(res_numerator / gsd, res_denominator / gsd);
+		return Fraction(res_numerator, res_denominator);
 	}
 	Fraction operator-() const { Fraction temp = *this; temp.numerator_ = -numerator_; temp.denominator_ = denominator_; return temp; }
 	Fraction& operator++() { numerator_ += denominator_; return *this; }
