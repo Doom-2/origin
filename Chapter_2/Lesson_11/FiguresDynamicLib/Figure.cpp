@@ -1,7 +1,7 @@
-#include "Figure.h"
+ï»¿#include "Figure.h"
 
 
-Figure::Figure() : _name{ "Ôèãóğà" } {}
+Figure::Figure() : _name{ "Ğ¤Ğ¸Ğ³ÑƒÑ€Ğ°" } {}
 
 Figure::Figure(const std::string& fig_name) : _name(fig_name) {}
 

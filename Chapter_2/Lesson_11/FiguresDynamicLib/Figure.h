@@ -1,4 +1,4 @@
-#pragma once
+Ôªø#pragma once
 #include <iostream>
 #ifdef FIGURESDYNAMICLIB_EXPORTS
 #define FIGURESDYNAMICLIB_API __declspec(dllexport)
@@ -10,7 +10,7 @@
 class FIGURESDYNAMICLIB_API Figure
 {
 protected:
-	std::string _name{ "‘Ë„Û‡" };
+	std::string _name{ "–§–∏–≥—É—Ä–∞" };
 
 public:
 	Figure();
