@@ -372,6 +372,6 @@ Lesson_1.8/
 # VisualStudio .vsxproj files
 *.vcxproj*
 
-!Chapter_2/Lesson_11/*/*.sln
-!Chapter_2/Lesson_11/*/*.vcxproj
-!Chapter_2/Lesson_11/*/*.vcxproj.filters
+!Chapter_2/Lesson_11/**/*.sln
+!Chapter_2/Lesson_11/**/*.vcxproj
+!Chapter_2/Lesson_11/**/*.vcxproj.filters
