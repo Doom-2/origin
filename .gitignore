@@ -365,6 +365,7 @@ FodyWeavers.xsd
 Game of Life/
 Homework_1.10/
 Lesson_1.8/
+Chapter_2/Lesson_12/Catch2/
 
 # VisualStudio .sln files
 *.sln
@@ -372,6 +373,7 @@ Lesson_1.8/
 # VisualStudio .vsxproj files
 *.vcxproj*
 
-!Chapter_2/Lesson_11/**/*.sln
-!Chapter_2/Lesson_11/**/*.vcxproj
-!Chapter_2/Lesson_11/**/*.vcxproj.filters
+!Chapter_2/Lesson_1*/**/*.sln
+!Chapter_2/Lesson_1*/**/*.vcxproj
+!Chapter_2/Lesson_1*/**/*.vcxproj.filters
+
