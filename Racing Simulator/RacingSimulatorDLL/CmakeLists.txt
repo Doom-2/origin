@@ -1,0 +1,36 @@
+cmake_minimum_required(VERSION 3.22.0)
+
+set(SOURCE_LIB
+"AuxFunc.cpp"
+"PrintFunc.cpp"
+"Vehicle.cpp"
+"GroundVehicle.cpp"
+"Camel.cpp"
+"FastCamel.cpp"
+"Centaur.cpp"
+"SuperBoots.cpp"
+"AirVehicle.cpp"
+"MagicCarpet.cpp"
+"Eagle.cpp"
+"Broom.cpp"
+"Race.cpp"
+)
+set(SOURCE_HD 
+"AuxFunc.h"
+"PrintFunc.h"
+"VehicleData.h"
+"Vehicles.h"
+"Vehicle.h"
+"GroundVehicle.h"
+"Camel.h"
+"FastCamel.h"
+"Centaur.h"
+"SuperBoots.h"
+"AirVehicle.h"
+"MagicCarpet.h"
+"Eagle.h"
+"Broom.h"
+"Race.h"
+)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+add_library(RacingSimulatorDLL SHARED ${SOURCE_LIB} ${SOURCE_HD})
